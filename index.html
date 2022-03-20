@@ -20,11 +20,9 @@
     <!-- My CSS Styles -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
-    <section
-      class="vh-100 row bg-primary justify-content-center align-items-center"
-    >
-      <div class="col-md-10">
+  <body class="bg-primary">
+    <section class="vh-100 row justify-content-center align-items-center mx-1">
+      <div class="col-md-6">
         <div class="card bg-dark text-white">
           <div class="card-header text-center"><h1>Password Checker</h1></div>
           <div class="card-body text-center">
@@ -46,31 +44,55 @@
               No ingreses 3 o mas caracteres iguales consecutivos (ejem 111 o
               aaa)
             </p>
-            <p id="control-d" class="text-success mb-4">
+            <p id="control-d" class="text-success mb-2">
               No ingreses caracteres especiales (%,?,/,etc)
             </p>
-            <!-- Input -->
-            <div class="px-5 form-outline form-white mb-2">
-              <input
-                type="password"
-                id="input-password"
-                class="form-control form-control-lg"
-              />
-              <label class="form-label mt-2" for="input-password">Password</label>
+
+            <div>
+              <label>Ingrese Contraseña</label>
+              <div class="input-group mt-2">
+                <input
+                  id="input-password"
+                  type="Password"
+                  class="form-control"
+                />
+              </div>
+              <button
+                id="btn-password"
+                class="btn btn-outline-light px-3 mt-2"
+                type="button"
+              >
+                Login
+              </button>
             </div>
-            <button
-              id="btn-password"
-              class="btn btn-outline-light btn-lg px-5"
-              type="button"
-            >
-              Login
-            </button>
+            <!--  -->
           </div>
           <div class="card-footer text-center">
-            <a class="text-white h4 mx-3" href="#"><i class="bi bi-linkedin"></i></a>
-            <a class="text-white h4 mx-3"href="#"><i class="bi bi-github"></i></a>
-            <a class="text-white h4 mx-3"href="#"><i class="bi bi-twitter"></i></a>
-            <p class="p-0 m-0 mt-2"><small>Copyright 2022 - <span class="text-white-50">HyM Soft</span> - V0.03 beta</small> </p>
+            <a
+              class="text-white h4 mx-3"
+              href="https://www.linkedin.com/in/hugo-antonio-segura-22099696/"
+              target="_blank"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a
+              class="text-white h4 mx-3"
+              href="https://github.com/hymsoft"
+              target="_blank"
+              ><i class="bi bi-github"></i
+            ></a>
+            <a
+              class="text-white h4 mx-3"
+              href="https://twitter.com/Hymsoft"
+              target="_blank"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <p class="p-0 m-0 mt-2">
+              <small
+                >Copyright 2022 - <span class="text-white-50">HyM Soft</span> -
+                V0.03 beta</small
+              >
+            </p>
+          </div>
         </div>
       </div>
     </section>
