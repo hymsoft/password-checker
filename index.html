@@ -23,8 +23,11 @@
   <body class="bg-primary">
     <section class="vh-100 row justify-content-center align-items-center mx-1">
       <div class="col-md-6">
-        <div class="card bg-dark text-white">
+        <!-- Card -->
+        <div class="card bg-dark text-white" style="border-radius: 1em">
+          <!-- Card Header -->
           <div class="card-header text-center"><h1>Password Checker</h1></div>
+          <!-- Card Body -->
           <div class="card-body text-center">
             <p class="text-white-70 mb-2">
               Proyecto desarrollado como segundo reto del modulo 2 de
@@ -38,7 +41,7 @@
               Ingresá entre 8 y 20 caracteres
             </p>
             <p id="control-b" class="text-danger mb-0">
-              Usá números, letras mayúsculas y minúsculas
+              Usá números y letras, por lo menos 1 mayúscula
             </p>
             <p id="control-c" class="text-danger mb-0">
               No ingreses 3 o mas caracteres iguales consecutivos (ejem 111 o
@@ -47,7 +50,7 @@
             <p id="control-d" class="text-success mb-2">
               No ingreses caracteres especiales (%,?,/,etc)
             </p>
-
+            <!-- Input Form -->
             <div>
               <label>Ingrese Contraseña</label>
               <div class="input-group mt-2">
@@ -56,6 +59,15 @@
                   type="Password"
                   class="form-control"
                 />
+                <div class="input-group-append">
+                  <button
+                    id="show-password"
+                    class="btn btn-primary"
+                    type="button"
+                  >
+                    <i id="show-password-icon" class="bi bi-eye"></i>
+                  </button>
+                </div>
               </div>
               <button
                 id="btn-password"
@@ -67,6 +79,7 @@
             </div>
             <!--  -->
           </div>
+          <!-- Card Footer -->
           <div class="card-footer text-center">
             <a
               class="text-white h4 mx-3"
@@ -94,6 +107,7 @@
             </p>
           </div>
         </div>
+        <!-- End Card -->
       </div>
     </section>
     <!-- Bootstrap Scripts -->

@@ -71,7 +71,7 @@ const controlPassword = (e) => {
     ? ponerColor($controlB, "normal")
     : ponerColor($controlB, "error");
 
-  /* Busco que no haya 3 caracteres iguales consecutivos */
+  /* Busco que haya Numeros y Caracteres*/
   let $controlC = document.getElementById("control-c");
   repetidosValido(password)
     ? ponerColor($controlC, "normal")
@@ -92,14 +92,36 @@ const controlPassword = (e) => {
     : ($btnPassword.disabled = true);
 };
 
+function mostrarPassword() {
+  let cambio = document.getElementById("input-password");
+  if (cambio.type == "password") {
+    cambio.type = "text";
+    $showPasswordIcon.classList.remove("bi-eye");
+    $showPasswordIcon.classList.add("bi-eye-slash");
+  } else {
+    cambio.type = "password";
+    $showPasswordIcon.classList.remove("bi-eye-slash");
+    $showPasswordIcon.classList.add("bi-eye");
+  }
+}
+
 const $txtPassword = document.getElementById("input-password");
 const $btnPassword = document.getElementById("btn-password");
+const $showPassword = document.getElementById("show-password");
+const $showPasswordIcon = document.getElementById("show-password-icon");
 
 $txtPassword.addEventListener("keyup", controlPassword);
 $btnPassword.addEventListener(
   "click",
   function (event) {
     mostrarModal();
+  },
+  false
+);
+$showPassword.addEventListener(
+  "click",
+  function (event) {
+    mostrarPassword();
   },
   false
 );
